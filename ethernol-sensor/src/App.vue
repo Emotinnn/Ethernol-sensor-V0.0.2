@@ -1,6 +1,7 @@
-<template>
-  <div class="justify-content: center;align-items: center; h-screen">
+<template class="flex items-center justify-center h-screen bg-black">
+  <div>
     <GaugeComponent :ethanolValue="ethanolValue" />
+    
   </div>
 </template>
 

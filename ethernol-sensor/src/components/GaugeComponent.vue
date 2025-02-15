@@ -1,13 +1,15 @@
 <template>
-  <div class="gauge-container center">
-      <div class="gauge-background" :style="{ background: gaugeStyle }"></div>
-      <div class="gauge-center">
-          <div class="gauge-value">{{ ethanolValue }}</div>
-          <div class="unit">Ethanol %</div>
-      </div>
-  </div>
-</template>
-
+    <div class="flex items-center justify-center h-screen bg-black">
+        <div class="gauge-container relative w-72 h-72 rounded-full flex items-center justify-center shadow-lg">
+            <div class="gauge-background absolute w-full h-full rounded-full" :style="{ background: gaugeStyle }"></div>
+            <div class="gauge-center relative w-4/5 h-4/5 bg-gradient-to-b from-gray-800 to-black rounded-full flex items-center justify-center shadow-inner">
+                <div class="gauge-value text-6xl text-white">{{ ethanolValue }}</div>
+                <div class="unit absolute bottom-5 text-white text-sm">Ethanol %</div>
+            </div>
+        </div>
+    </div>
+  </template>
+  
 <script>
 export default {
   props: ['ethanolValue'],
